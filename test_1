@@ -1,0 +1,46 @@
+def fund(argds):
+    _debug = 0
+
+
+class Test(object):
+
+    def __init__(self, running):
+        self.RUNNING = running
+        self._INTERNAL_VAR = 123
+
+    def _run_impl(self):
+        _debug = 0
+
+    def run(self):
+        if (self.RUNNING):
+            print('Already running')
+        else:
+            self.RUNNING = True
+            print('Start run')
+
+    def util(self):
+        return ('abc', 123, 'xyz')
+
+    def dict(self):
+        return {
+            'a': [1,2,3],
+            'b': 2,
+        }
+
+    @staticmethod
+    def static_func():
+        print('test')
+
+
+# test = Test(False)
+# test.run()
+# test.run()
+# string_1,int_1, string_2 = test.util()
+# tup_1 = test.util()
+# print(tup_1[0])
+# dict_1 = test.dict()
+# print(dict_1['a'])
+
+Test.static_func()
+
+# print(string_1,int_1, string_2)
